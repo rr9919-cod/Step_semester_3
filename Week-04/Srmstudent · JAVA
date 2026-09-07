@@ -1,0 +1,26 @@
+public class SrmStudent {
+    static String collegeName;
+    static String academicYear;
+
+    // runs exactly once, no matter how many objects are created
+    static {
+        collegeName = "SRM";
+        academicYear = "2025-2026";
+        System.out.println("College info loaded");
+    }
+
+    private String name;
+
+    public SrmStudent(String name) {
+        this.name = name;
+        System.out.println("Student record created: " + name);
+    }
+
+    public static void main(String[] args) {
+        String[] names = {"Ravi", "Meera", "Karthik", "Divya", "Anitha"};
+
+        for (String n : names) {
+            new SrmStudent(n);
+        }
+    }
+}
